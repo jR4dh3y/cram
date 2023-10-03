@@ -11,26 +11,19 @@
         <h1>Menu</h1>
     </header>
     <section class="menu">
-        <div class="filter-options">
-            <label for="filter-select">Filter by Category:</label>
-            <select id="filter-select">
-                <option value="All">All</option>
-                <option value="Meals">Meals</option>
-                <option value="Beverages">Beverages</option>
-            </select>
-            <label for="sort-select">Sort by Price:</label>
-            <select id="sort-select">
-                <option value="LowToHigh">Low to High</option>
-                <option value="HighToLow">High to Low</option>
-            </select>
-        </div>
         <div class="category">
             <h2>Meals</h2>
             <div class="item">
                 <img src="meal1.png" alt="Meal 1">
                 <h3><a href="#" class="item-title">Meal 1</a></h3>
-                <p class="item-description">Description of Meal 1.</p>
-                <p>Price: $10.99</p>
+                <p class="item-description">Description of Meal 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonummy.</p>
+                <p class="item-price">Price: $10.99</p>
+            </div>
+            <div class="item">
+                <img src="meal2.png" alt="Meal 2">
+                <h3><a href="#" class="item-title">Meal 2</a></h3>
+                <p class="item-description">Description of Meal 2. Sed convallis orci, in congue libero justo eu mauris.</p>
+                <p class="item-price">Price: $12.49</p>
             </div>
             <!-- Add more meal items here -->
         </div>
@@ -39,12 +32,30 @@
             <div class="item">
                 <img src="beverage1.png" alt="Beverage 1">
                 <h3><a href="#" class="item-title">Beverage 1</a></h3>
-                <p class="item-description">Description of Beverage 1.</p>
-                <p>Price: $2.99</p>
+                <p class="item-description">Description of Beverage 1. Fusce euismod congue efficitur.</p>
+                <p class="item-price">Price: $2.99</p>
+            </div>
+            <div class="item">
+                <img src="beverage2.png" alt="Beverage 2">
+                <h3><a href="#" class="item-title">Beverage 2</a></h3>
+                <p class="item-description">Description of Beverage 2. Nullam eu dapibus est.</p>
+                <p class="item-price">Price: $3.49</p>
             </div>
             <!-- Add more beverage items here -->
         </div>
     </section>
+    <label for="filter-select">Filter by Category:</label>
+    <select id="filter-select">
+        <option value="All">All</option>
+        <option value="Meals">Meals</option>
+        <option value="Beverages">Beverages</option>
+    </select>
+
+    <label for="sort-select">Sort by Price:</label>
+    <select id="sort-select">
+        <option value="LowToHigh">Low to High</option>
+        <option value="HighToLow">High to Low</option>
+    </select>
     <script src="script.js"></script>
 </body>
 </html>
