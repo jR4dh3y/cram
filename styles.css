@@ -2,7 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
+  color: #333;
 }
 
 header {
@@ -15,34 +16,63 @@ header {
 .menu {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding: 20px;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 20px;
+}
+
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.menu-options button {
+  background-color: #ff6600; /* Orange color for the button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-options button:hover {
+  background-color: #ff4500; /* Slightly darker orange on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 .category {
   text-align: center;
-  width: 45%; /* Adjust as needed to fit your content */
-  margin: 1%;
+  width: 45%;
+  margin-bottom: 20px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease; /* Add a hover effect */
+  transition: transform 0.3s ease;
 }
 
 .category:hover {
-  transform: translateY(-5px); /* Lift the category on hover */
+  transform: translateY(-5px);
+  background-color: #f2f2f2;
 }
 
 .item {
   border: 1px solid #ccc;
   padding: 10px;
-  margin: 10px;
   max-width: 100%;
-  transition: transform 0.3s ease; /* Add a hover effect */
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .item:hover {
-  transform: scale(1.05); /* Zoom in on hover */
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f5f5f5;
 }
 
 .item img {
@@ -50,12 +80,21 @@ header {
 }
 
 .item-description {
-  display: none; /* Hide descriptions by default */
+  display: none;
 }
 
 .item-price {
   font-weight: bold;
   margin-top: 10px;
+  color: #ff6600; /* Orange color for prices */
 }
 
-/* Add more CSS styles as needed */
+.item-title a {
+  color: #0066cc; /* Blue color for item titles */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.item-title a:hover {
+  color: #ff4500; /* Slightly darker blue on hover */
+}

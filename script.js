@@ -1,3 +1,13 @@
+// Get the sort toggle button and the sort options div
+const sortToggle = document.getElementById('sort-toggle');
+const sortOptions = document.querySelector('.menu-options');
+
+// Add a click event listener to the sort toggle button
+sortToggle.addEventListener('click', () => {
+    // Toggle the visibility of the sort options
+    sortOptions.classList.toggle('show-sort-options');
+});
+
 // Get all the item title links and their descriptions
 const itemTitles = document.querySelectorAll('.item-title');
 const itemDescriptions = document.querySelectorAll('.item-description');
@@ -32,8 +42,8 @@ function sortItems() {
 
     const itemsArray = Array.from(document.querySelectorAll('.item'));
     const sortedItems = itemsArray.sort((a, b) => {
-        const priceA = parseFloat(a.querySelector('p:last-child').textContent.replace('Price: $', ''));
-        const priceB = parseFloat(b.querySelector('p:last-child').textContent.replace('Price: $', ''));
+        const priceA = parseFloat(a.querySelector('.item-price').textContent.replace('Price: $', ''));
+        const priceB = parseFloat(b.querySelector('.item-price').textContent.replace('Price: $', ''));
 
         if (selectedSort === 'LowToHigh') {
             return priceA - priceB;
