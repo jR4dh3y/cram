@@ -7,7 +7,7 @@ itemTitles.forEach((title, index) => {
     title.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent the link from navigating
         
-        // Toggle the visibility of the corresponding item description
+        // Toggle the visibility of the corresponding item description with animation
         if (itemDescriptions[index].style.display === 'block') {
             itemDescriptions[index].style.display = 'none';
         } else {
