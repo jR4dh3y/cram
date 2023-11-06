@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meal and Beverage Menu</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="nav">
+            <img src="cart.png" alt="">
+            <img src="profile.png" alt="">
+        </div>
+        <div class="category1">
+                    
+        </div>
+        <section class="menu">
+            <div class="menu-options">
+                <button id="sort-low-to-high">Sort by Price (Low to High)</button>
+                <button id="sort-high-to-low">Sort by Price (High to Low)</button>
+                <label for="filter-select">Filter by Category:</label>
+                <select id="filter-select">
+                    <option value="All">All</option>
+                    <option value="Meals">Meals</option>
+                    <option value="Beverages">Beverages</option>
+                </select>
+            </div>
+        <div class="category">
+            <h2>Meals</h2>
+            <div class="item">
+                <img src="meal1.png" alt="Meal 1">
+                <h3><a href="#" class="item-title">Meal 1</a></h3>
+                <p class="item-description">Description of Meal 1.</p>
+                <p>Price: $10.99</p>
+            </div>
+                <!-- Meal 1 details -->
+            <div class="item">
+                <!-- Meal 2 details -->
+            </div>
+            <!-- Add more meal items here -->
+        </div>
+        <div class="category">
+            <h2>Beverages</h2>
+            <div class="item">
+                <img src="beverage.png" alt="Beverage 1">
+                <h3><a href="#" class="item-title">Beverage 1</a></h3>
+                <p class="item-description">Description of Beverage 1.</p>
+                <p>Price: $2.99</p>
+                <!-- Beverage 1 details -->
+            </div>
+            <div class="item">
+                <!-- Beverage 2 details -->
+            </div>
+            <!-- Add more beverage items here -->
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
