@@ -130,7 +130,7 @@ img{
 }
 #page4{
     width: 100%;
-    min-height: 30vh; /* min is used for adding responsiveness will learn tht in reponsive web */
+    min-height: 70vh; /* min is used for adding responsiveness will learn tht in reponsive web */
     z-index: 10;
 }
 
