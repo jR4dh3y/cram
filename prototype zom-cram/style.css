@@ -1,53 +1,313 @@
+/* when you add or give absolute to any div/element give relative to its parent */
+
 *{
     margin : 0;
     padding : 0;
-    box-sizing : border-box;
-    font-family: "Montserrat";
+    box-sizing : border-box;/*  */
+    font-family: "Montserrat", sans-serif; /* used to give font style */
+    color: white;
+}
+*::selection{
+    background-color: white;
+    color: #95C11E;
 }
 
 html,body{
     width : 100%;
     height : 100%;
+    cursor: none;/* it removes the default cursor from the website when using it */
+    /* perspective: 800px; */ /* by applying this the cursors effect is not shwoing up check the issue  */
 }
 
-#nav {
+/* bodys scroll bar code not working check for error */
+body::-webkit-scrollbar{
+    display: block;
+    width: 5px;
+    background-color: #95C11E;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 20%;
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #96c11e;
+    position: fixed; /* yeh samj nhi aya */
+    z-index: 100;
+    transition: all ease 0.1s;
+}
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%; /* gives edges to the div selected used for making a circular shape */
+    background-color: #96c11e39;
+    position: fixed; /* yeh samj nhi aya */
+    filter: blur(50px); /* adds blur to the desired shape made / div */
+    z-index: 9;
+}
+#nav{
     width: 100%;
-    height: 10vh;
-    /* background-color: red; */
-    color: white;
-    position: fixed;
-    display: flex;
-    gap: 60vh;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
+    height: 135px;
+    align-items: center; /* {align items} height wise - top to bottom (movement in y axis) - alignment */
+    justify-content: space-between; /* { justify content } width wise - left to right (movement in x axis) - alignment*/
+    
+    /* flex start makes the contents go to the start of flex in this case they align along the left side of navbar because justify content keeps the content from left to right */
+    gap: 60px; /* used to give gap between different elemnets */ 
+    position: fixed; /* this will keep the nav bar fixed with us while we scroll the whole website */ 
+    padding: 0 120px; /* padding hoti hai andar space dena element ke (layman language mai) */ 
+    display: flex; /* it helps to make the desired thing flexible in nature - by default it arranges from columns (default) to rows - it is used to divide and control the elements in rows and columns  */ 
+    z-index: 99; /* brings things forward or backward */ 
 }
-#nav-logo{
+#nav h4{
     font-size: 4vh;
-    font-style: italic;
+    text-transform: uppercase; /* text tranform helps us to change the text how ever we want */
+    font-weight: 500; /* it can be used to bring weight in characters like we can say make it bold or slim */
 }
-#nav-headings{
-    font-size: 4vh;
+#nav #others{
     display: flex;
-    gap: 4vh;
+    gap: 5vh;
 }
-img {
-    width: 100%;
+#nav #others #livedemo{
+    width:15vh;
+    height: 6vh;
+    background-color: #95C11E;
+    border: 0;
+    border-radius: 10%;
+}
+
+img{
     height: 100%;
-    object-fit: cover;
-    position: fixed;
-    z-index: -20;
+    width: 100%;
+    object-fit: cover; /* it helps us to make the object cover the whole page(dimension)  */
+    position: fixed; /* keepps the video fixed while the user is scrolling */
+    z-index: -2; /* helps to keep the video in the utmost back */
 }
 #main{
+    position: relative; /* it makes main relative so its child stays inside of it and we can give child the characterstics w.r.t the parent that is the main */
+    background-color: rgba(0, 0, 0, 0.4); /* helps to give the bakcground color in this case it is applied in the whole page front and last value in the brackets is for opacity which will help to keep the video less bright - faded - so that user can focus more on the websites content */
+}
+#page1{
+    min-height: 60vh; /* gave vh here because main ki height defined nhi hai toh " % " laga kar ghanta kuch nhi dikheyga aur vh matlab viewportheight*/
+    width: 100%;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: top;
+    display: flex;
+    flex-direction: column;/* it helps to bring the column default back to the normal flex used display above */
+    text-align: center; /* aligns the texts to the center */
+    z-index: 10;
+    padding-top: 30vh;
+}
+#page1 h1{
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
 }
 
-#page1{
-    width: 100%;
-    height: 100vh;
+/* before and after are sudo elements which add text before and after the main content in the xyz::before/after element here it is used to add the 3d effect to the big words in h1*/
+#page1 h1::before{
+    content: "ORDER. TAKEAWAY. EAT.";
+    position: absolute; /* absolute position mai element uth jata hai kaha uth jata hai nhi pata toh colour laag ke pata karna chaiye (lol actually mai it is used to elevate in a layer which we can say is about it like a 3d layer or another dimension above it LAYMAN LANGAUGE)*/
+    color: black;
+    top: -5px; /* defines where the element should be - here we have given h1 relative so it will work/adjust accoridng to it */
+    left: -5px ; /* defines where the element should be - here we have given h1 relative so it will work/adjust accoridng to it */
+    -webkit-text-stroke: 2px #95C11E; /* adds that border effect around the newelt added using sudo elments(before/after) */
+    z-index: -1;
 }
+#page1 h2{
+    font-size: 7vh;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#page1 p{
+    font-size: 25px;
+    font-weight: 500;
+    width: 50%;   
+}
+#page3{
+    width: 100%;
+    min-height: 30vh; /* min is used for adding responsiveness will learn tht in reponsive web */
+    z-index: 10;
+}
+
+#about-us{
+    margin: 40px 0;
+    height: 40vh;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    justify-content:space-around;
+}
+
+#about-us-in{
+    width: 60%;
+    text-align: center ;
+}
+
+#about-us h3{
+    font-size: 60px;
+}
+#about-us p{
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+#about-us img{
+    height: 220px;
+    width: 220px;
+    border-radius: 10%;
+    background-size: cover;
+    background-position: center;
+}
+#page4{
+    width: 100%;
+    min-height: 100vh;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+/* ">" this is direct sign if you want to trigger en element directly which is in a subsectin of an element */
+#page4>p{ 
+    width: 60%;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 50px;
+}
+
+#page4 img{
+    position: absolute; 
+    /* why we did this ? => maybe to move it where evr you want cause its parent is relative so boundary is fixed still recheck!!!!! */
+    height: 60px;
+}
+
+/* due to the scroller in the side that is inbuilf for web page scroling there is little space in the right side of the components/elements CORRECTED ==> BY USING LEFT PROPERTY*/
 #page2{
+    height: 30vh; /* min height nhi use kar skatey idr kyu? */
     width: 100%;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 40px;
 }
+#page2 .elem{
+    /* left: px; */
+    overflow: hidden; /* why did we gave it here? */
+    height: 50%;
+    width: 20%;
+    position: relative;
+    border-radius: 15px;
+}
+
+.elem h2{
+    height: 100%;
+    width: 100%;
+    /* because we have given h2 as 100by 100 percent therefore no need of overlay here direct add the color needed for hovering animation */
+    background-color: #ABDE22;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: 850;
+    font-size: 40px;
+    z-index: 10;
+    transition: all ease 0.6s;
+}
+
+.elem:hover h2{
+    background-color: transparent;
+    color: white;
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.6s;
+    scale: 1.1;
+}
+.elem:hover img{
+    scale: 1;
+}
+
+#page2 h1{
+    font-size: 85px;
+    position: absolute;
+    top: -25%;
+    font-weight: 800;
+    -webkit-text-stroke: 2px white;
+    font-family: gilroy;
+    color: black;
+}
+
+.elem:hover h1{
+    -webkit-text-stroke: 2px #95C11E;
+}
+
+
+#footer{
+    margin-top: 10vh;
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,#089D3C,#9AC81F,#B2E724 );
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    gap: 150px;
+    align-items: center;
+    color: black;
+    padding: 0 100px;
+}
+
+#f1 img{
+    height: 100px;
+}
+#f1,#f2,#f3,#f4{
+    width: fit-content;
+    width: -moz-fit-content; /* for firefox */
+    position: relative;
+    z-index: 99;
+}
+
+#f2 h3 {
+    font-size: 30px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+  
+#f3 h3 {
+    font-size: 30px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+#f4 h4 {
+    font-size: 20px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+

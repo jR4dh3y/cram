@@ -4,28 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cram</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="nav">
-        <div id="nav-logo">
-            <h3>Cram <sup>it</sup></h3>
+        <div id="name">
+            <h4>CRAM <sup>it</sup></h4>
         </div>
-        <div id="nav-headings">
-            <h3>Home</h3>
-            <h3>Who Are We</h3>
-            <h3>Work With Us</h3>
+        <div id="others">
+            <button id="livedemo" type="button">LIVE DEMO</button> 
+            <h4>JOIN US</h4>
+            <h4>CONTACT US</h4>
         </div>
     </div>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
     <img src="1.jpeg" alt="">
-    <div id="main">
+    <div id="main"> <!-- main page is the main page lol ,,, page1 and page 2 are added to bring the scorlling thing in website to add content below the main screen -->
         <div id="page1">
-        
+            <h1>ORDER. TAKEAWAY. EAT.</h1>
+            <h2>WELCOME TO CRAM</h2>
+            <p>Cram is a TAKEAWAY xyz currently working in Jammu,India. Making your life at ease and SAVING YOUR PRECIOUS TIME. Order before so you dont have to wait in line.</p>
+        </div>
+        <div id="page4">
+            <p>Enjoy your couple of hours, relax and have fun. Our Takeaway system simplifies your inconvenience. Experience the best takeaway service in town.</p>
         </div>
         <div id="page2">
-    
+            <h1>WHAT ARE YOU WAITING FOR?</h1>
+            <div class="elem">
+                <h2>LIVE DEMO</h2>
+                <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-toptracer.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C683&ssl=1" alt="">
+            </div>
+        </div>
+        <div id="page3">
+            <div id="about-us">
+                <img src="./DAKSH.jpg" alt="">
+                <div id="about-us-in">
+                    <h3>ABOUT US</h3>
+                    <p>We are two Computer Science Engineering students from MIET, Jammu. Passionate about simplifying lives through technology, we created Cram - a self-served takeaway platform. Our mission is to save your precious time and make your dining experience hassle-free.
+                    </p>
+                </div>
+                <img src="./RADHEY.jpg" alt="">
+            </div>      
+        </div>
+        <!-- it is not getting made inside the page 4 check the reason for this and why min-height cant be applied to the earlier mentioned elements check for that also -->
+        <div id="footer">
+            <div id="f1">
+                <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="">
+            </div>
+            <div id="f2">
+                <h3>TOPTRACER RANGE</h3>
+                <h3>ADVENTURE GOLF</h3>
+                <h3>CAFE</h3>
+            </div>
+            <div id="f3">
+                <h3>Events</h3>
+                <h3>Golf Lessons</h3>
+                <h3>Contact Us</h3>
+            </div>
+            <div id="f4">
+                <h4>
+                    A20, Sidcup Bypass<br>    
+                    Chislehurst<br>    
+                    Kent<br>    
+                    BR7 6RP<br>    
+                    Tel: 0208 309 0181<br>    
+                    Get Directions<br>    
+                </h4>
+            </div>
+            <!-- add a div here for copyright section -->
         </div>
     </div>
+    
+    <!-- i dont know about this will learn in the upcoming videos -->
+    <!-- this is gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- this is scrolltrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 </html>
