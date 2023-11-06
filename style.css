@@ -128,7 +128,7 @@ img{
     font-weight: 500;
     width: 50%;   
 }
-#page3{
+#page4{
     width: 100%;
     min-height: 30vh; /* min is used for adding responsiveness will learn tht in reponsive web */
     z-index: 10;
@@ -147,7 +147,7 @@ img{
 }
 
 #about-us-in{
-    width: 60%;
+    width: 50%;
     text-align: center ;
 }
 
@@ -162,15 +162,20 @@ img{
 }
 
 #about-us img{
-    height: 220px;
+    position: relative;
+    height: 280px;
     width: 220px;
     border-radius: 10%;
     background-size: cover;
     background-position: center;
+    scale: 1;
 }
-#page4{
+#page2{
     width: 100%;
-    min-height: 100vh;
+    min-height:
+    
+    
+    100vh;
     z-index: 10;
     align-items: center;
     justify-content: center;
@@ -179,7 +184,7 @@ img{
 }
 
 /* ">" this is direct sign if you want to trigger en element directly which is in a subsectin of an element */
-#page4>p{ 
+#page2>p{ 
     width: 60%;
     font-size: 40px;
     font-weight: 700;
@@ -187,14 +192,14 @@ img{
     line-height: 50px;
 }
 
-#page4 img{
+#page2 img{
     position: absolute; 
     /* why we did this ? => maybe to move it where evr you want cause its parent is relative so boundary is fixed still recheck!!!!! */
     height: 60px;
 }
 
 /* due to the scroller in the side that is inbuilf for web page scroling there is little space in the right side of the components/elements CORRECTED ==> BY USING LEFT PROPERTY*/
-#page2{
+#page3{
     height: 30vh; /* min height nhi use kar skatey idr kyu? */
     width: 100%;
     display: flex;
@@ -203,7 +208,7 @@ img{
     position: relative;
     gap: 40px;
 }
-#page2 .elem{
+#page3 .elem{
     /* left: px; */
     overflow: hidden; /* why did we gave it here? */
     height: 50%;
@@ -244,7 +249,7 @@ img{
     scale: 1;
 }
 
-#page2 h1{
+#page3 h1{
     font-size: 85px;
     position: absolute;
     top: -25%;

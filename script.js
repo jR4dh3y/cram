@@ -79,19 +79,8 @@ gsap.from("#about-us img,#about-us-in",{
     scrollTrigger:{
         trigger:"#about-us",
         scroller:"body",
-        start:"top 70%",
-        end:"top 65%",  
+        start:"top 55%",
+        end:"top 60%",  
         scrub:2,
     },
 });
-
-gsap.from("#page2 h1",{
-    y:50,
-    scrollTrigger:{
-        trigger:"#page4 h1",
-        scroller:"body",
-        start:"top 70%",
-        end:"top 75%",
-        scrub:2,
-    }
-})
